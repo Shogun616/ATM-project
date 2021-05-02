@@ -1,14 +1,15 @@
 package atmInterface;
 
+import atmMachine.Account;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UserInterface {
 
+    private static final Account account = new Account();
     public static boolean exit(boolean testing, boolean execute) {
 
-        boolean exit = false;
-        while (!exit) {
+        while (true) {
             Scanner scan = new Scanner(System.in);
             String decision;
             System.out.println("Exit? (Y/N)");
@@ -16,7 +17,6 @@ public class UserInterface {
             if (testing) {
                 if (execute) {
                     decision = "Y";
-                    exit = true;
                 } else {
                     decision = "N";
                 }
@@ -39,16 +39,13 @@ public class UserInterface {
                 return true;
             }
         }
-        return false;
     }
 
     public static void menu() {
 
-        boolean repeat = false;
-
-        while (!repeat) {
+        while (true) {
             System.out.println("======================");
-            System.out.println("      Main Menu       ");
+            System.out.println("      Please select an options       ");
             System.out.println("======================");
             System.out.println("0. Exit");
             System.out.println("1. Withdraw");
@@ -60,12 +57,12 @@ public class UserInterface {
                 case 0:
                     exit(false, false);
                     break;
-//                case 1:
-//
-//                    break;
-//                case 2:
-//
-//                    break;
+                case 1:
+                    account.withdraw();
+                    break;
+                case 2:
+                    account.balance();
+                    break;
                 default:
                     System.out.println("Wrong input! Please choose a number between 0 and 2.");
             }
@@ -75,7 +72,7 @@ public class UserInterface {
     public static int readInteger() {
 
         Scanner scan = new Scanner(System.in);
-        Boolean loop = true;
+        boolean loop = true;
         int tal = 0;
 
         while (loop) {
