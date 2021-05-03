@@ -41,7 +41,6 @@ public class UserInterfaceTest {
 
         String input = "bad input";
 
-        // Här fejkar vi användarinput genom att ändra inputstream från konsolen till variabeln input ovan
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
 

@@ -22,11 +22,11 @@ public class Account {
         }
     }
 
-        public static void balance(){
+    public static void balance(){
 
-            System.out.println("Your balance is " + balance + "\n");
-            anotherTransaction();
-        }
+        System.out.println("Your balance is " + balance + "\n");
+        anotherTransaction();
+    }
 
     private static void anotherTransaction() {
 

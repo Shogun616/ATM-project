@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class UserInterface {
 
-    private static final Account account = new Account();
     public static boolean exit(boolean testing, boolean execute) {
 
         while (true) {
@@ -58,10 +57,10 @@ public class UserInterface {
                     exit(false, false);
                     break;
                 case 1:
-                    account.withdraw();
+                    Account.withdraw();
                     break;
                 case 2:
-                    account.balance();
+                    Account.balance();
                     break;
                 default:
                     System.out.println("Wrong input! Please choose a number between 0 and 2.");
@@ -83,8 +82,7 @@ public class UserInterface {
                 loop = false;
 
             } catch (InputMismatchException e) {
-                System.out.println("Wrong input!Please choose a number between 0 and 2.");
-                //throw new InputMismatchException("Wrong input!Please choose a number between 0 and 2.");
+                System.out.println("Wrong input! Please choose a number between 0 and 2.");
             }
             scan.nextLine();
         }

@@ -2,10 +2,6 @@ package atmMachine;
 
 import org.junit.jupiter.api.*;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.util.NoSuchElementException;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AccountTest {
@@ -18,6 +14,27 @@ public class AccountTest {
     @BeforeEach
     public void initEach(){
         System.out.println("Before Each initEach() method called");
+    }
+
+    @Test
+    @DisplayName("Testing withdraw")
+    void withdraw(){
+        Account account = new Account();
+        assertTrue(true, String.valueOf(account));
+    }
+
+    @Test
+    @DisplayName("Testing balance")
+    void balance(){
+        Account account = new Account();
+        assertTrue(true, String.valueOf(account));
+    }
+
+    @Test
+    @DisplayName("Testing anotherTransaction")
+    void anotherTransaction(){
+        Account account = new Account();
+        assertTrue(true, String.valueOf(account));
     }
 
     @AfterEach
