@@ -43,9 +43,9 @@ public class UserInterface {
     public static void menu() {
 
         while (true) {
-            System.out.println("======================");
+            System.out.println("=====================================");
             System.out.println("      Please select an options       ");
-            System.out.println("======================");
+            System.out.println("=====================================");
             System.out.println("0. Exit");
             System.out.println("1. Withdraw");
             System.out.println("2. Account balance");
